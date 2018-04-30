@@ -112,6 +112,3 @@ def atom(nxt):
                 return Failure(result.message, nxt)
         else:
             return Failure("expected atom", nxt)
-
-e = input("> ")
-print(parse(e))
