@@ -14,4 +14,8 @@ def evaluate(e):
 		elif e.bop == Times:
 			return evaluate(e.e1) * evaluate(e.e2)
 		elif e.bop == Div:
-			return evaluate(e.e1) / evaluate(e.e2)
+			e2 = evaluate(e.e2)
+			if e2 == 0:
+				return 0
+			else:
+				return evaluate(e.e1) / e2
