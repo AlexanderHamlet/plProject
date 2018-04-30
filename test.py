@@ -18,6 +18,7 @@ class EvalTest(unittest.TestCase):
 
 	def test_div(self):
 		self.assertEqual(evaluate(Binary(Div, N(60), N(4))), 15)
+		self.assertEqual(evaluate(Binary(Div, N(50), N(0))), 0)
 
 	def test_neg(self):
 		self.assertEqual(evaluate(Unary(Neg, N(15))), -15)
