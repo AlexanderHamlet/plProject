@@ -1,5 +1,5 @@
 from eval import evaluate
-from parser import parse
+from custom_parser import parse
 
 def main():
     # Standard REPL

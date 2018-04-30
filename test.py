@@ -2,7 +2,7 @@ import unittest
 from ast import *
 from eval import evaluate
 import math
-from parser import parse
+from custom_parser import parse
 
 class EvalTest(unittest.TestCase):
 
