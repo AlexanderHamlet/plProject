@@ -93,11 +93,7 @@ def atom(nxt):
             return Success(N(float(nxt[0].val)), nxt[1:])
         elif nxt[0].name == "ADD":
             if nxt[0].val == '+':
-                result = atom(nxt[1:])
-                if type(result) == Success:
-                    return Success(result.ast, result.next)
-                else:
-                    return Failure(result.message, nxt)
+                return atom(nxt[1:]) # Ignore plus unary ops
             else:
                 result = atom(nxt[1:])
                 if type(result) == Success:
